@@ -1,0 +1,9 @@
+.todos-container {
+  width: 30%;
+  margin: 0 auto;
+  margin-top: 2rem;
+  height: 32rem;
+  position: relative;
+  display: block;
+  overflow-y: auto;
+}
