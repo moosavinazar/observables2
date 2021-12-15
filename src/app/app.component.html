@@ -14,20 +14,20 @@
   <div class="tab-content" id="myTabContent">
     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 
-      <div class="alert alert-success d-flex align-items-center" role="alert">
+      <div class="alert alert-success d-flex align-items-center" role="alert" *ngFor="let todo of doneTasks$ | async">
         <svg class="bi flex-shrink-0 me-2" width="24" height="24"><use xlink:href="#check-circle-fill"/></svg>
         <div>
-          First Tab
+          {{ todo.title }}
         </div>
       </div>
 
     </div>
     <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
 
-      <div class="alert alert-warning d-flex align-items-center" role="alert">
+      <div class="alert alert-warning d-flex align-items-center" role="alert" *ngFor="let todo of undoneTasks$ | async">
         <svg class="bi flex-shrink-0 me-2" width="24" height="24"><use xlink:href="#exclamation-triangle-fill"/></svg>
         <div>
-          Second Tab
+          {{ todo.title }}
         </div>
       </div>
 
